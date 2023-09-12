@@ -388,6 +388,8 @@ function findLongestWord(arr) {
     // Порівнюємо довжину поточного слова з довжиною найдовшого слова
     // Інакше повертаємо попереднє найдовше слово без змін
     // Повертаємо найдовше слово
+
+    // Моя версія
     if (Array.isArray(arr)) {
         let length = arr.reduce(
             (len, element) =>
@@ -398,6 +400,17 @@ function findLongestWord(arr) {
     } else {
         return "";
     }
+    // Версія 2
+    //if (!Array.isArray(arr)) {
+    //    return "";
+    //}
+    //const longestWord = arr.reduce((longest, word) => {
+    //    if (word.length > longest.length) {
+    //        return word;
+    //    }
+    //    return longest;
+    //}, "");
+    //return longestWord;
 }
 console.log("Завдання: 15 ==============================");
 console.log(findLongestWord(["apple", "banana", "pineapple", "watermelon"])); // Виведе 'watermelon'
